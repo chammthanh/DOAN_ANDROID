@@ -13,25 +13,6 @@ class HoSo extends StatefulWidget {
 class HoSoState extends State<HoSo> {
   @override
   Widget build(BuildContext context) {
-    // return Scaffold(
-    //   appBar: AppBar(
-    //     backgroundColor: Colors.white,
-    //     elevation: 10,
-    //     shadowColor: shadowColor,
-    //     leadingWidth: 40,
-    //     leading: IconButton(
-    //       onPressed: () {
-    //         Navigator.pop(context);
-    //       },
-    //       icon: SvgPicture.asset(
-    //         'assets/icons/chevron-left.svg',
-    //       ),
-    //     ),
-    //     title: const Text(
-    //       'Hồ Sơ',
-    //       style: TextStyle(color: textColor),
-    //     ),
-    //   ),
     return Padding(
       padding: const EdgeInsets.only(left: 20, right: 20),
       child: Center(

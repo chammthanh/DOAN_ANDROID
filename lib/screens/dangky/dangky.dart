@@ -2,7 +2,7 @@ import 'package:doan_cake/constraint.dart';
 import 'package:doan_cake/screens/dangky/components/btndangky.dart';
 import 'package:doan_cake/screens/dangky/components/inputdangky.dart';
 import 'package:flutter/material.dart';
-import 'package:doan_cake/screens/mediabutton.dart';
+import 'package:doan_cake/widgets/mediabutton.dart';
 
 class DangKy extends StatefulWidget {
   const DangKy({Key? key}) : super(key: key);
@@ -58,7 +58,7 @@ class _DangKyState extends State<DangKy> {
               const SizedBox(height: 20),
               const ButtonDangKy(),
               const SizedBox(height: 25),
-              btnmedia,
+              const MediaButton(),
               const SizedBox(height: 20),
             ],
           ),

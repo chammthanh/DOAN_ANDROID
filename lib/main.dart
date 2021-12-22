@@ -1,7 +1,4 @@
 import 'package:doan_cake/screens/dangnhap/dangnhap.dart';
-import 'package:doan_cake/screens/hoso/danhsachdiachi/themdiachi/themdiachi.dart';
-import 'package:doan_cake/screens/trangchu/trangchu.dart';
-import 'package:doan_cake/test.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: 'Flutter Demo',
-      home: ThemDiaChi(),
+      home: DangNhap(),
       debugShowCheckedModeBanner: false,
     );
   }
