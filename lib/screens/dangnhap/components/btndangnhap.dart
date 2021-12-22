@@ -16,8 +16,7 @@ class ButtonDangNhapState extends State<ButtonDangNhap> {
       height: 45,
       child: ElevatedButton(
         onPressed: () {
-          Navigator.push(context,
-              MaterialPageRoute(builder: (context) => const TrangChu()));
+          Navigator.pushNamed(context, '/trangchu');
         },
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all(priColor),

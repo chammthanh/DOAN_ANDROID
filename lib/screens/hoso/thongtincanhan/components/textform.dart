@@ -106,8 +106,7 @@ class _TextFormState extends State<TextForm> {
           ),
           trailing: IconButton(
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const MatKhau()));
+                Navigator.pushNamed(context, '/thaydoimatkhau');
               },
               icon: SvgPicture.asset("assets/icons/chevron-right.svg")),
         ),

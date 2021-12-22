@@ -2,13 +2,13 @@ import 'package:doan_cake/constraint.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class DonHang extends StatefulWidget {
-  const DonHang({Key? key}) : super(key: key);
+class LSDonHang extends StatefulWidget {
+  const LSDonHang({Key? key}) : super(key: key);
   @override
-  State<DonHang> createState() => DonHangState();
+  State<LSDonHang> createState() => LSDonHangState();
 }
 
-class DonHangState extends State<DonHang> {
+class LSDonHangState extends State<LSDonHang> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

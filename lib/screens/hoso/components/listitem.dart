@@ -22,8 +22,7 @@ class ListItemState extends State<ListItem> {
             margin: const EdgeInsets.only(bottom: 20),
             child: TextButton(
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const ThongTin()));
+                Navigator.pushNamed(context, '/thongtincanhan');
               },
               child: Column(
                 children: [
@@ -36,10 +35,7 @@ class ListItemState extends State<ListItem> {
                     ),
                     trailing: IconButton(
                       onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const ThongTin()));
+                        Navigator.pushNamed(context, '/thongtincanhan');
                       },
                       icon: SvgPicture.asset('assets/icons/chevron-right.svg'),
                     ),
@@ -57,8 +53,7 @@ class ListItemState extends State<ListItem> {
             margin: const EdgeInsets.only(bottom: 20),
             child: TextButton(
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const DiaChi()));
+                Navigator.pushNamed(context, '/danhsachdiachi');
               },
               child: Column(
                 children: [
@@ -71,10 +66,7 @@ class ListItemState extends State<ListItem> {
                     ),
                     trailing: IconButton(
                       onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const DiaChi()));
+                        Navigator.pushNamed(context, '/danhsachdiachi');
                       },
                       icon: SvgPicture.asset('assets/icons/chevron-right.svg'),
                     ),
@@ -92,8 +84,7 @@ class ListItemState extends State<ListItem> {
             margin: const EdgeInsets.only(bottom: 20),
             child: TextButton(
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const DonHang()));
+                Navigator.pushNamed(context, '/lichsudonhang');
               },
               child: Column(
                 children: [
@@ -106,10 +97,7 @@ class ListItemState extends State<ListItem> {
                     ),
                     trailing: IconButton(
                       onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const DonHang()));
+                        Navigator.pushNamed(context, '/lichsudonhang');
                       },
                       icon: SvgPicture.asset('assets/icons/chevron-right.svg'),
                     ),

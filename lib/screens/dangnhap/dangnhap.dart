@@ -69,10 +69,7 @@ class _SignInState extends State<DangNhap> {
                     style: TextStyle(color: subTextColor)),
                 TextButton(
                   onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const DangKy()));
+                    Navigator.pushNamed(context, '/dangky');
                   },
                   child: const Text("Đăng Ký",
                       style: TextStyle(
