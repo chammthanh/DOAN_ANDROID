@@ -1,7 +1,4 @@
 import 'package:doan_cake/constraint.dart';
-import 'package:doan_cake/screens/dangky/dangky.dart';
-import 'package:doan_cake/screens/hoso/hoso.dart';
-import 'package:doan_cake/screens/trangchu/trangchu.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 

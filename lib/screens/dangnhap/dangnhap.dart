@@ -1,5 +1,4 @@
 import 'package:doan_cake/constraint.dart';
-import 'package:doan_cake/screens/dangky/dangky.dart';
 import 'package:doan_cake/widgets/mediabutton.dart';
 import 'package:doan_cake/screens/dangnhap/components/btndangnhap.dart';
 import 'package:doan_cake/screens/dangnhap/components/inputdangnhap.dart';
@@ -59,9 +58,7 @@ class _SignInState extends State<DangNhap> {
                 fontWeight: FontWeight.w300,
               ),
             ),
-            const SizedBox(height: 20),
             const MediaButton(),
-            const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
