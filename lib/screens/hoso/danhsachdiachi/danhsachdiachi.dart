@@ -1,5 +1,6 @@
 import 'package:doan_cake/constraint.dart';
 import 'package:doan_cake/screens/hoso/danhsachdiachi/components/listaddress.dart';
+import 'package:doan_cake/screens/hoso/danhsachdiachi/components/thembutton.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -36,21 +37,9 @@ class DiaChiState extends State<DiaChi> {
         child: Padding(
           padding: const EdgeInsets.all(20),
           child: Column(
-            children: [
-              const DSDiaChi(),
-              Align(
-                alignment: Alignment.topLeft,
-                child: TextButton(
-                  onPressed: () {},
-                  child: const Text(
-                    "+ Thêm địa chỉ",
-                    style: TextStyle(
-                        color: subTextColor,
-                        fontSize: textsize - 6,
-                        fontWeight: FontWeight.w300),
-                  ),
-                ),
-              )
+            children: const [
+              DSDiaChi(),
+              ThemDiaChiButton(),
             ],
           ),
         ),

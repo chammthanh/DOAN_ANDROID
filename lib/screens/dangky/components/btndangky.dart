@@ -1,5 +1,4 @@
 import 'package:doan_cake/constraint.dart';
-import 'package:doan_cake/screens/trangchu/trangchu.dart';
 import 'package:flutter/material.dart';
 
 class ButtonDangKy extends StatefulWidget {
@@ -16,8 +15,7 @@ class ButtonDangKyState extends State<ButtonDangKy> {
       height: 45,
       child: ElevatedButton(
         onPressed: () {
-          Navigator.push(context,
-              MaterialPageRoute(builder: (context) => const TrangChu()));
+          Navigator.pushNamed(context, '/trangchu');
         },
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all(priColor),
