@@ -1,5 +1,4 @@
 import 'package:doan_cake/constraint.dart';
-import 'package:doan_cake/screens/trangchu/trangchu.dart';
 import 'package:flutter/material.dart';
 
 class ButtonDangNhap extends StatefulWidget {
@@ -29,15 +28,6 @@ class ButtonDangNhapState extends State<ButtonDangNhap> {
             fontWeight: FontWeight.w400,
           ),
         ),
-      ),
-      decoration: const BoxDecoration(
-        boxShadow: [
-          BoxShadow(
-            color: shadowColor,
-            blurRadius: 15,
-            offset: Offset(0, 2),
-          ),
-        ],
       ),
     );
   }

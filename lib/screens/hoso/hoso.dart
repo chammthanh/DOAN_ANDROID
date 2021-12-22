@@ -14,7 +14,7 @@ class HoSoState extends State<HoSo> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 20, right: 20),
+      padding: const EdgeInsets.only(left: 20, top: 20, right: 20),
       child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

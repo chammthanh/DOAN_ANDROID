@@ -20,7 +20,9 @@ class _ThemDiaChiState extends State<ThemDiaChi> {
             style: TextStyle(color: textColor),
           ),
           leading: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(context);
+            },
             icon: SvgPicture.asset("assets/icons/chevron-left.svg"),
           ),
         ),

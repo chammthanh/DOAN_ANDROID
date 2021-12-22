@@ -29,15 +29,6 @@ class ButtonDangKyState extends State<ButtonDangKy> {
           ),
         ),
       ),
-      decoration: const BoxDecoration(
-        boxShadow: [
-          BoxShadow(
-            color: shadowColor,
-            blurRadius: 10,
-            offset: Offset(0, 4),
-          ),
-        ],
-      ),
     );
   }
 }
