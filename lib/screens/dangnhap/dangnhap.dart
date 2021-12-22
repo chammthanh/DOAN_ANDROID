@@ -1,6 +1,6 @@
 import 'package:doan_cake/constraint.dart';
 import 'package:doan_cake/screens/dangky/dangky.dart';
-import 'package:doan_cake/screens/mediabutton.dart';
+import 'package:doan_cake/widgets/mediabutton.dart';
 import 'package:doan_cake/screens/dangnhap/components/btndangnhap.dart';
 import 'package:doan_cake/screens/dangnhap/components/inputdangnhap.dart';
 import 'package:flutter/cupertino.dart';
@@ -60,7 +60,7 @@ class _SignInState extends State<DangNhap> {
               ),
             ),
             const SizedBox(height: 20),
-            btnmedia,
+            const MediaButton(),
             const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
