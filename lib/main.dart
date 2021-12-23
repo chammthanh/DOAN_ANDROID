@@ -1,5 +1,6 @@
 import 'package:doan_cake/screens/dangky/dangky.dart';
 import 'package:doan_cake/screens/dangnhap/dangnhap.dart';
+import 'package:doan_cake/screens/giohang/giohang.dart';
 import 'package:doan_cake/screens/hoso/danhsachdiachi/danhsachdiachi.dart';
 import 'package:doan_cake/screens/hoso/danhsachdiachi/themdiachi/themdiachi.dart';
 import 'package:doan_cake/screens/hoso/hoso.dart';
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
         '/thaydoimatkhau': (context) => const MatKhau(),
         '/themdiachi': (context) => const ThemDiaChi(),
         '/lichsudonhang': (context) => const LSDonHang(),
+        '/giohang': (context) => const GioHang(),
       },
       debugShowCheckedModeBanner: false,
     );
