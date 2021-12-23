@@ -86,7 +86,9 @@ class _TrangChuState extends State<TrangChu> {
           ),
           const SizedBox(width: 15),
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, "/giohang");
+            },
             padding: EdgeInsets.zero,
             constraints: const BoxConstraints(),
             icon: SvgPicture.asset("assets/icons/shopping-cart.svg"),
