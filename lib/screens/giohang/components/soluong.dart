@@ -16,12 +16,18 @@ class _SoLuongState extends State<SoLuong> {
           width: 30,
           height: 30,
           decoration: const BoxDecoration(
-            color: Colors.grey,
+            color: priColor,
+            borderRadius: BorderRadius.all(
+              Radius.circular(5),
+            ),
           ),
           child: IconButton(
             padding: EdgeInsets.zero,
             onPressed: () {},
-            icon: const Icon(Icons.add),
+            icon: const Icon(
+              Icons.add,
+              size: 20,
+            ),
           ),
         ),
         Container(
@@ -30,19 +36,25 @@ class _SoLuongState extends State<SoLuong> {
           height: 30,
           child: const Text(
             "1",
-            style: TextStyle(fontSize: textsize),
+            style: TextStyle(fontSize: textsize - 2),
           ),
         ),
         Container(
           width: 30,
           height: 30,
           decoration: const BoxDecoration(
-            color: Colors.grey,
+            color: priColor,
+            borderRadius: BorderRadius.all(
+              Radius.circular(5),
+            ),
           ),
           child: IconButton(
             padding: EdgeInsets.zero,
             onPressed: () {},
-            icon: const Icon(Icons.remove),
+            icon: const Icon(
+              Icons.remove,
+              size: 20,
+            ),
           ),
         )
       ],

@@ -34,26 +34,31 @@ class _GioHangState extends State<GioHang> {
         child: Padding(
           padding: const EdgeInsets.only(left: 20, top: 20, right: 20),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            mainAxisSize: MainAxisSize.max,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Image.asset(
                     "assets/images/product1.png",
-                    width: 100,
+                    width: 110,
                     height: 120,
                     fit: BoxFit.fitWidth,
                   ),
+                  const SizedBox(width: 10),
                   const TextGioHang(),
                   Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: const [
                       CheckBox(),
-                      SizedBox(height: 15),
+                      SizedBox(height: 30),
                       XoaButton(),
                     ],
                   ),
                 ],
-              )
+              ),
             ],
           ),
         ),
