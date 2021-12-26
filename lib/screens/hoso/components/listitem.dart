@@ -16,7 +16,7 @@ class ListItemState extends State<ListItem> {
       child: Column(
         children: [
           Container(
-            margin: const EdgeInsets.only(bottom: 20),
+            margin: const EdgeInsets.only(bottom: 10),
             child: TextButton(
               onPressed: () {
                 Navigator.pushNamed(context, '/thongtincanhan');
@@ -47,7 +47,7 @@ class ListItemState extends State<ListItem> {
             ),
           ),
           Container(
-            margin: const EdgeInsets.only(bottom: 20),
+            margin: const EdgeInsets.only(bottom: 10),
             child: TextButton(
               onPressed: () {
                 Navigator.pushNamed(context, '/danhsachdiachi');
@@ -78,7 +78,7 @@ class ListItemState extends State<ListItem> {
             ),
           ),
           Container(
-            margin: const EdgeInsets.only(bottom: 20),
+            margin: const EdgeInsets.only(bottom: 10),
             child: TextButton(
               onPressed: () {
                 Navigator.pushNamed(context, '/lichsudonhang');
