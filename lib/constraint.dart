@@ -12,4 +12,5 @@ const shadowColor = Color.fromRGBO(0, 0, 0, 0.15);
 const inputTextColor = Color.fromRGBO(196, 196, 196, 1);
 const bottombar = Colors.white;
 const dhColor = Color.fromRGBO(246, 233, 231, 1);
+const heartbtn = Color.fromRGBO(202, 11, 11, 1);
 const textsize = 20.0;
