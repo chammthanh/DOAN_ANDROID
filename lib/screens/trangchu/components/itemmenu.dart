@@ -14,7 +14,9 @@ class ItemMenu extends StatelessWidget {
         margin: const EdgeInsets.only(right: 15, bottom: 10),
         padding: const EdgeInsets.only(left: 10, right: 10),
         child: TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, '${loaisp.pushname}');
+            },
             child: Row(
               children: [
                 Image.asset("${loaisp.image}", width: 35, height: 22),

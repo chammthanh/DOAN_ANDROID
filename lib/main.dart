@@ -1,3 +1,4 @@
+import 'package:doan_cake/screens/banhkem/banhkem.dart';
 import 'package:doan_cake/screens/dangky/dangky.dart';
 import 'package:doan_cake/screens/dangnhap/dangnhap.dart';
 import 'package:doan_cake/screens/giohang/giohang.dart';
@@ -34,6 +35,7 @@ class MyApp extends StatelessWidget {
         '/themdiachi': (context) => const ThemDiaChi(),
         '/lichsudonhang': (context) => const LSDonHang(),
         '/giohang': (context) => const GioHang(),
+        '/banhkem': (context) => const BanhKemPage()
       },
       debugShowCheckedModeBanner: false,
     );
