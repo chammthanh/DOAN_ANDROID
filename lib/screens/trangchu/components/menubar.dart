@@ -1,5 +1,5 @@
 import 'package:doan_cake/models/loaisp.dart';
-import 'package:doan_cake/screens/trangchu/components/testmenu.dart';
+import 'package:doan_cake/screens/trangchu/components/itemmenu.dart';
 import 'package:flutter/material.dart';
 
 class MenuBar extends StatelessWidget {
@@ -19,7 +19,7 @@ class MenuBar extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   itemCount: loaisp.length,
                   itemBuilder: (context, index) =>
-                      TestMenu(loaisp: loaisp[index])),
+                      ItemMenu(loaisp: loaisp[index])),
             ),
           ),
         ],

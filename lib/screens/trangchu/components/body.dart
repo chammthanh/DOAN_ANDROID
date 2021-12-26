@@ -35,7 +35,7 @@ class _BodyHomeState extends State<BodyHome> {
           ),
           const SizedBox(height: 10),
           const MenuBar(),
-          const SizedBox(height: 10),
+          const SizedBox(height: 5),
           Container(
             padding: const EdgeInsets.only(top: 15),
             decoration: const BoxDecoration(

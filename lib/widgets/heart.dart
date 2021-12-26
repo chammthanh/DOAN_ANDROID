@@ -1,3 +1,4 @@
+import 'package:doan_cake/constraint.dart';
 import 'package:flutter/widgets.dart';
 
 import 'package:flutter/material.dart';
@@ -10,16 +11,26 @@ class ClickHeart extends StatefulWidget {
 }
 
 class _ClickHeartState extends State<ClickHeart> {
+  bool _clickheart = false;
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(left: 10),
       padding: const EdgeInsets.all(5),
       child: IconButton(
-        onPressed: () {},
+        onPressed: () {
+          setState(() {
+            _clickheart = !_clickheart;
+          });
+        },
         padding: EdgeInsets.zero,
         constraints: const BoxConstraints(),
-        icon: SvgPicture.asset("assets/icons/heart.svg"),
+        icon: _clickheart
+            ? SvgPicture.asset(
+                "assets/icons/heart-fill.svg",
+                color: heartbtn,
+              )
+            : SvgPicture.asset("assets/icons/heart.svg"),
       ),
     );
   }
