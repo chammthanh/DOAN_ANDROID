@@ -8,6 +8,23 @@ class SoLuong extends StatefulWidget {
 }
 
 class _SoLuongState extends State<SoLuong> {
+  int _counter = 1;
+  void tangSL() {
+    setState(() {
+      _counter++;
+    });
+  }
+
+  void giamSL() {
+    if (_counter <= 1) {
+      _counter = 1;
+    } else {
+      setState(() {
+        _counter--;
+      });
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -23,9 +40,9 @@ class _SoLuongState extends State<SoLuong> {
           ),
           child: IconButton(
             padding: EdgeInsets.zero,
-            onPressed: () {},
+            onPressed: giamSL,
             icon: const Icon(
-              Icons.add,
+              Icons.remove,
               size: 20,
             ),
           ),
@@ -34,9 +51,9 @@ class _SoLuongState extends State<SoLuong> {
           alignment: Alignment.center,
           width: 30,
           height: 30,
-          child: const Text(
-            "1",
-            style: TextStyle(fontSize: textsize - 2),
+          child: Text(
+            '$_counter',
+            style: const TextStyle(fontSize: textsize - 2),
           ),
         ),
         Container(
@@ -50,9 +67,9 @@ class _SoLuongState extends State<SoLuong> {
           ),
           child: IconButton(
             padding: EdgeInsets.zero,
-            onPressed: () {},
+            onPressed: tangSL,
             icon: const Icon(
-              Icons.remove,
+              Icons.add,
               size: 20,
             ),
           ),

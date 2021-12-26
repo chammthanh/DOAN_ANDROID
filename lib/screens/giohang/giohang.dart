@@ -1,7 +1,6 @@
 import 'package:doan_cake/constraint.dart';
-import 'package:doan_cake/screens/giohang/components/checkbox.dart';
-import 'package:doan_cake/screens/giohang/components/text.dart';
-import 'package:doan_cake/screens/giohang/components/xoabutton.dart';
+import 'package:doan_cake/screens/giohang/components/body.dart';
+import 'package:doan_cake/screens/giohang/components/dathangbar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
@@ -17,52 +16,34 @@ class _GioHangState extends State<GioHang> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: appBarColor,
-        leading: IconButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            icon: SvgPicture.asset("assets/icons/chevron-left.svg")),
-        title: const Text(
-          "Giỏ Hàng",
-          style: TextStyle(color: textColor),
-        ),
-      ),
-      body: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: Padding(
-          padding: const EdgeInsets.only(left: 20, top: 20, right: 20),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            mainAxisSize: MainAxisSize.max,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Image.asset(
-                    "assets/images/product1.png",
-                    width: 110,
-                    height: 120,
-                    fit: BoxFit.fitWidth,
-                  ),
-                  const SizedBox(width: 10),
-                  const TextGioHang(),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
-                      CheckBox(),
-                      SizedBox(height: 30),
-                      XoaButton(),
-                    ],
-                  ),
-                ],
-              ),
-            ],
+        appBar: AppBar(
+          backgroundColor: appBarColor,
+          leading: IconButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: SvgPicture.asset("assets/icons/chevron-left.svg")),
+          title: const Text(
+            "Giỏ Hàng",
+            style: TextStyle(color: textColor),
           ),
         ),
-      ),
-    );
+        body: Column(
+          children: [
+            SingleChildScrollView(
+              scrollDirection: Axis.vertical,
+              child: Column(
+                children: const [
+                  BodyGioHang(),
+                ],
+              ),
+            ),
+          ],
+        ),
+        bottomNavigationBar: const BottomAppBar(
+          color: Colors.transparent,
+          elevation: 0,
+          child: DatHangBar(),
+        ));
   }
 }
