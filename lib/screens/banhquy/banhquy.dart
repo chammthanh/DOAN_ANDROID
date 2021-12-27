@@ -1,16 +1,16 @@
 import 'package:doan_cake/constraint.dart';
 import 'package:doan_cake/models/sanpham.dart';
-import 'package:doan_cake/screens/banhkem/components/item.dart';
+import 'package:doan_cake/screens/banhquy/components/item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class BanhKemPage extends StatefulWidget {
-  const BanhKemPage({Key? key}) : super(key: key);
+class BanhQuyPage extends StatefulWidget {
+  const BanhQuyPage({Key? key}) : super(key: key);
   @override
-  _BanhKemPageState createState() => _BanhKemPageState();
+  _BanhQuyPageState createState() => _BanhQuyPageState();
 }
 
-class _BanhKemPageState extends State<BanhKemPage> {
+class _BanhQuyPageState extends State<BanhQuyPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,7 +28,7 @@ class _BanhKemPageState extends State<BanhKemPage> {
             ),
           ),
           title: const Text(
-            'Bánh Kem',
+            'Bánh Quy',
             style: TextStyle(color: textColor),
           ),
           actions: [
@@ -51,7 +51,7 @@ class _BanhKemPageState extends State<BanhKemPage> {
                   crossAxisCount: 2,
                   crossAxisSpacing: 10,
                   mainAxisSpacing: 10),
-              itemBuilder: (context, index) => ItemBK(sanpham: sanpham[index])),
+              itemBuilder: (context, index) => ItemBQ(sanpham: sanpham[index])),
         ));
   }
 }

@@ -1,6 +1,9 @@
 import 'package:doan_cake/screens/banhkem/banhkem.dart';
+import 'package:doan_cake/screens/banhmi/banhmi.dart';
+import 'package:doan_cake/screens/banhquy/banhquy.dart';
 import 'package:doan_cake/screens/dangky/dangky.dart';
 import 'package:doan_cake/screens/dangnhap/dangnhap.dart';
+import 'package:doan_cake/screens/donut/donut.dart';
 import 'package:doan_cake/screens/giohang/giohang.dart';
 import 'package:doan_cake/screens/hoso/danhsachdiachi/danhsachdiachi.dart';
 import 'package:doan_cake/screens/hoso/danhsachdiachi/themdiachi/themdiachi.dart';
@@ -9,6 +12,7 @@ import 'package:doan_cake/screens/hoso/lichsudonhang/lichsudonhang.dart';
 import 'package:doan_cake/screens/hoso/thongtincanhan/matkhau/matkhau.dart';
 import 'package:doan_cake/screens/hoso/thongtincanhan/thongtincanhan.dart';
 import 'package:doan_cake/screens/trangchu/trangchu.dart';
+import 'package:doan_cake/screens/trangmieng/banhmi.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -35,7 +39,11 @@ class MyApp extends StatelessWidget {
         '/themdiachi': (context) => const ThemDiaChi(),
         '/lichsudonhang': (context) => const LSDonHang(),
         '/giohang': (context) => const GioHang(),
-        '/banhkem': (context) => const BanhKemPage()
+        '/banhkem': (context) => const BanhKemPage(),
+        '/banhmi': (context) => const BanhMiPage(),
+        '/banhquy': (context) => const BanhQuyPage(),
+        '/donut': (context) => const DonutPage(),
+        '/trangmieng': (context) => const TrangMiengPage(),
       },
       debugShowCheckedModeBanner: false,
     );

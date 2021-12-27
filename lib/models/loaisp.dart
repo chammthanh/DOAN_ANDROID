@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 class LoaiSP {
   final int id;
   final String image, loai, pushname;
@@ -9,18 +7,6 @@ class LoaiSP {
     required this.loai,
     required this.pushname,
   });
-  // LoaiSP.fromJson(Map<String, dynamic> json)
-  //     : id = json['id'],
-  //       image = json['image'],
-  //       loai = json['loai'];
-  // Map<String, dynamic> toJson() {
-  //   final Map<String, dynamic> data = <String, dynamic>{};
-  //   data['id'] = id;
-  //   data['image'] = image;
-  //   data['loai'] = loai;
-  //   return data;
-  // }
-
 }
 
 List<LoaiSP> loaisp = [
@@ -40,10 +26,7 @@ List<LoaiSP> loaisp = [
       loai: "Bánh Quy",
       pushname: "/banhquy"),
   LoaiSP(
-      id: 4,
-      image: "assets/menu/donut.png",
-      loai: "Donut",
-      pushname: "/dounut"),
+      id: 4, image: "assets/menu/donut.png", loai: "Donut", pushname: "/donut"),
   LoaiSP(
       id: 5,
       image: "assets/menu/pudding.png",
