@@ -15,13 +15,13 @@ class ItemMenu extends StatelessWidget {
         padding: const EdgeInsets.only(left: 10, right: 10),
         child: TextButton(
             onPressed: () {
-              Navigator.pushNamed(context, '${loaisp.pushname}');
+              Navigator.pushNamed(context, loaisp.pushname);
             },
             child: Row(
               children: [
-                Image.asset("${loaisp.image}", width: 35, height: 22),
+                Image.asset(loaisp.image, width: 35, height: 22),
                 Text(
-                  "${loaisp.loai}",
+                  loaisp.loai,
                   style: const TextStyle(
                       color: textColor, fontWeight: FontWeight.bold),
                 )

@@ -1,8 +1,10 @@
+import 'package:doan_cake/pagetest.dart';
 import 'package:doan_cake/screens/banhkem/banhkem.dart';
 import 'package:doan_cake/screens/banhmi/banhmi.dart';
 import 'package:doan_cake/screens/banhquy/banhquy.dart';
 import 'package:doan_cake/screens/dangky/dangky.dart';
 import 'package:doan_cake/screens/dangnhap/dangnhap.dart';
+import 'package:doan_cake/screens/danhgia/danhgia.dart';
 import 'package:doan_cake/screens/donut/donut.dart';
 import 'package:doan_cake/screens/giohang/giohang.dart';
 import 'package:doan_cake/screens/hoso/danhsachdiachi/danhsachdiachi.dart';
@@ -44,6 +46,7 @@ class MyApp extends StatelessWidget {
         '/banhquy': (context) => const BanhQuyPage(),
         '/donut': (context) => const DonutPage(),
         '/trangmieng': (context) => const TrangMiengPage(),
+        '/danhgia': (context) => const DanhGiaPage(),
       },
       debugShowCheckedModeBanner: false,
     );

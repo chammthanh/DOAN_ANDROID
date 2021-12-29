@@ -1,5 +1,5 @@
 import 'package:doan_cake/constraint.dart';
-import 'package:doan_cake/pagetest.dart';
+import 'package:doan_cake/screens/hoanthanh/hoanthanh.dart';
 import 'package:doan_cake/screens/hoso/hoso.dart';
 import 'package:doan_cake/screens/trangchu/components/body.dart';
 import 'package:flutter/material.dart';
@@ -44,6 +44,8 @@ class _TrangChuState extends State<TrangChu> {
         );
       } else if (index == 2) {
         appbarTitleString = "Don Hang";
+        _background = Colors.grey.shade100;
+        _colorappbar = Colors.white;
         appBarTitleText = Text(
           appbarTitleString,
           style: const TextStyle(color: textColor),
@@ -62,8 +64,8 @@ class _TrangChuState extends State<TrangChu> {
 
   static const List<Widget> _pages = [
     BodyHome(),
-    PageTest(),
     BodyHome(),
+    HoanThanhPage(),
     HoSo(),
   ];
 
@@ -111,7 +113,7 @@ class _TrangChuState extends State<TrangChu> {
         type: BottomNavigationBarType.fixed,
         unselectedFontSize: textsize - 8,
         selectedFontSize: textsize - 8,
-        selectedItemColor: priColor,
+        selectedItemColor: deftextColor,
         unselectedItemColor: subTextColor,
         unselectedIconTheme: const IconThemeData(color: subTextColor),
         items: [
@@ -119,7 +121,7 @@ class _TrangChuState extends State<TrangChu> {
               icon: _selectedIndex == 0
                   ? SvgPicture.asset(
                       "assets/icons/home-fill.svg",
-                      color: priColor,
+                      color: deftextColor,
                     )
                   : SvgPicture.asset(
                       "assets/icons/home.svg",
@@ -130,7 +132,7 @@ class _TrangChuState extends State<TrangChu> {
               icon: _selectedIndex == 1
                   ? SvgPicture.asset(
                       "assets/icons/heart-fill.svg",
-                      color: priColor,
+                      color: deftextColor,
                     )
                   : SvgPicture.asset(
                       "assets/icons/heart.svg",
@@ -141,7 +143,7 @@ class _TrangChuState extends State<TrangChu> {
               icon: _selectedIndex == 2
                   ? SvgPicture.asset(
                       "assets/icons/fluent_box-fill.svg",
-                      color: priColor,
+                      color: deftextColor,
                     )
                   : SvgPicture.asset(
                       "assets/icons/fluent_box.svg",
@@ -152,7 +154,7 @@ class _TrangChuState extends State<TrangChu> {
               icon: _selectedIndex == 3
                   ? SvgPicture.asset(
                       "assets/icons/user-fill.svg",
-                      color: priColor,
+                      color: deftextColor,
                     )
                   : SvgPicture.asset(
                       "assets/icons/user.svg",
