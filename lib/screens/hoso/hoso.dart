@@ -2,7 +2,6 @@ import 'package:doan_cake/constraint.dart';
 import 'package:doan_cake/screens/hoso/components/dangxuatbutton.dart';
 import 'package:doan_cake/screens/hoso/components/listitem.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class HoSo extends StatefulWidget {
   const HoSo({Key? key}) : super(key: key);
