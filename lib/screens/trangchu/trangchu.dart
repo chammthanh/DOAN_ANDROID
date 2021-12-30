@@ -2,6 +2,7 @@ import 'package:doan_cake/constraint.dart';
 import 'package:doan_cake/screens/hoanthanh/hoanthanh.dart';
 import 'package:doan_cake/screens/hoso/hoso.dart';
 import 'package:doan_cake/screens/trangchu/components/body.dart';
+import 'package:doan_cake/widgets/search.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -81,7 +82,9 @@ class _TrangChuState extends State<TrangChu> {
         title: appBarTitleText,
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              showSearch(context: context, delegate: Search());
+            },
             padding: EdgeInsets.zero,
             constraints: const BoxConstraints(),
             icon: SvgPicture.asset("assets/icons/search.svg"),

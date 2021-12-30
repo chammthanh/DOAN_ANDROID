@@ -47,6 +47,7 @@ class MyApp extends StatelessWidget {
         '/donut': (context) => const DonutPage(),
         '/trangmieng': (context) => const TrangMiengPage(),
         '/danhgia': (context) => const DanhGiaPage(),
+        '/test': (context) => const PageTest(),
       },
       debugShowCheckedModeBanner: false,
     );
