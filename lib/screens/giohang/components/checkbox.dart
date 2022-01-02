@@ -1,6 +1,5 @@
 import 'package:doan_cake/constraint.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class CheckBoxGH extends StatefulWidget {
   const CheckBoxGH({Key? key}) : super(key: key);

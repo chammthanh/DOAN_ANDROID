@@ -1,8 +1,5 @@
 import 'package:doan_cake/constraint.dart';
-import 'package:doan_cake/screens/danhgia/components/binhluan.dart';
-import 'package:doan_cake/screens/danhgia/components/danhgia.dart';
 import 'package:doan_cake/screens/danhgia/components/item.dart';
-import 'package:doan_cake/widgets/line.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

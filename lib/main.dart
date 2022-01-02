@@ -2,6 +2,7 @@ import 'package:doan_cake/pagetest.dart';
 import 'package:doan_cake/screens/banhkem/banhkem.dart';
 import 'package:doan_cake/screens/banhmi/banhmi.dart';
 import 'package:doan_cake/screens/banhquy/banhquy.dart';
+import 'package:doan_cake/screens/chitietsanpham/chitietsanpham.dart';
 import 'package:doan_cake/screens/dangky/dangky.dart';
 import 'package:doan_cake/screens/dangnhap/dangnhap.dart';
 import 'package:doan_cake/screens/danhgia/danhgia.dart';
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Cake',
-      initialRoute: '/',
+      initialRoute: '/chitietsanpham',
       routes: {
         '/': (context) => const DangNhap(),
         '/dangky': (context) => const DangKy(),
@@ -47,7 +48,8 @@ class MyApp extends StatelessWidget {
         '/donut': (context) => const DonutPage(),
         '/trangmieng': (context) => const TrangMiengPage(),
         '/danhgia': (context) => const DanhGiaPage(),
-        '/test': (context) => const PageTest(),
+        '/chitietsanpham': (context) => const ChiTietSP(),
+        '/test': (context) => const ChiTietSP(),
       },
       debugShowCheckedModeBanner: false,
     );
