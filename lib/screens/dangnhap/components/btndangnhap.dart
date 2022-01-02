@@ -10,7 +10,7 @@ class ButtonDangNhap extends StatefulWidget {
 class ButtonDangNhapState extends State<ButtonDangNhap> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: double.maxFinite,
       height: 45,
       child: ElevatedButton(

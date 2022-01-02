@@ -39,6 +39,7 @@ dependencies:
   js: ^0.6.2
   flutter_image_slideshow: ^0.1.2
   material_floating_search_bar: ^0.3.6
+  getwidget: ^2.0.4
 
 dev_dependencies:
   flutter_test:

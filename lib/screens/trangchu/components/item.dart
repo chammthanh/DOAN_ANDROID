@@ -16,7 +16,6 @@ class _ItemProductState extends State<ItemProduct> {
       padding: const EdgeInsets.only(right: 20, bottom: 20),
       child: Container(
         padding: const EdgeInsets.all(10),
-        width: 175,
         decoration: const BoxDecoration(
           color: Colors.white,
           boxShadow: [
@@ -31,8 +30,8 @@ class _ItemProductState extends State<ItemProduct> {
           children: [
             Image.asset(
               'assets/images/product1.png',
-              width: double.maxFinite,
-              height: 155,
+              width: 165,
+              height: 165,
               fit: BoxFit.cover,
             ),
             const SizedBox(height: 5),
@@ -40,10 +39,13 @@ class _ItemProductState extends State<ItemProduct> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 SizedBox(
-                  width: 100,
+                  width: 120,
                   child: Column(
                     children: [
                       ListTile(
+                        onTap: () {
+                          Navigator.pushNamed(context, '/chitietsanpham');
+                        },
                         contentPadding: const EdgeInsets.all(0),
                         title: const Text(
                           'Bánh sinh nhật có chữ HAPPY BIRTHDAY màu xanh navy',

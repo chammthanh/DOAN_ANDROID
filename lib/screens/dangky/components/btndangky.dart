@@ -10,7 +10,7 @@ class ButtonDangKy extends StatefulWidget {
 class ButtonDangKyState extends State<ButtonDangKy> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: double.maxFinite,
       height: 45,
       child: ElevatedButton(

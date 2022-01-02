@@ -1,4 +1,3 @@
-import 'package:doan_cake/constraint.dart';
 import 'package:doan_cake/screens/danhgia/components/binhluan.dart';
 import 'package:doan_cake/screens/danhgia/components/danhgia.dart';
 import 'package:doan_cake/screens/danhgia/components/hinhanh.dart';

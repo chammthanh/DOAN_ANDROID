@@ -39,7 +39,7 @@ class Search extends SearchDelegate {
     return ListView.builder(
       itemCount: 10,
       itemBuilder: (context, index) {
-        return Text("test");
+        return const Text("test");
       },
     );
   }
