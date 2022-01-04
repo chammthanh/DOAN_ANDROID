@@ -14,6 +14,8 @@ import 'package:doan_cake/screens/hoso/hoso.dart';
 import 'package:doan_cake/screens/hoso/lichsudonhang/lichsudonhang.dart';
 import 'package:doan_cake/screens/hoso/thongtincanhan/matkhau/matkhau.dart';
 import 'package:doan_cake/screens/hoso/thongtincanhan/thongtincanhan.dart';
+import 'package:doan_cake/screens/thanhtoan/hoanthanh/hoanthanh.dart';
+import 'package:doan_cake/screens/thanhtoan/thanhtoan.dart';
 import 'package:doan_cake/screens/trangchu/trangchu.dart';
 import 'package:doan_cake/screens/trangmieng/banhmi.dart';
 import 'package:flutter/material.dart';
@@ -30,7 +32,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Cake',
-      initialRoute: '/chitietsanpham',
+      initialRoute: '/hoanthanh',
       routes: {
         '/': (context) => const DangNhap(),
         '/dangky': (context) => const DangKy(),
@@ -49,6 +51,8 @@ class MyApp extends StatelessWidget {
         '/trangmieng': (context) => const TrangMiengPage(),
         '/danhgia': (context) => const DanhGiaPage(),
         '/chitietsanpham': (context) => const ChiTietSP(),
+        '/thanhtoan': (context) => const ThanhToanPage(),
+        '/hoanthanh': (context) => const HoanThanh(),
         '/test': (context) => const ChiTietSP(),
       },
       debugShowCheckedModeBanner: false,
