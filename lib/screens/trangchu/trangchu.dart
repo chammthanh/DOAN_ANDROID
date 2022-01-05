@@ -1,5 +1,5 @@
 import 'package:doan_cake/constraint.dart';
-import 'package:doan_cake/screens/hoanthanh/hoanthanh.dart';
+import 'package:doan_cake/screens/donmua/donmua.dart';
 import 'package:doan_cake/screens/hoso/hoso.dart';
 import 'package:doan_cake/screens/trangchu/components/body.dart';
 import 'package:doan_cake/widgets/search.dart';
@@ -14,101 +14,22 @@ class TrangChu extends StatefulWidget {
 
 class _TrangChuState extends State<TrangChu> {
   int _selectedIndex = 0;
-  String appbarTitleString = "Hi, thanhcham";
-  var appBarTitleText = const Text(
-    "Hi, thanhcham",
-    style: TextStyle(
-        fontSize: textsize + 4, color: textColor, fontWeight: FontWeight.bold),
-  );
-  Color _colorappbar = priColor;
-  Color _background = priColor;
+  final List<Widget> _pages = [
+    const BodyHome(),
+    const BodyHome(),
+    const DonMuaPage(),
+    const HoSo(),
+  ];
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
-      if (index == 0) {
-        _colorappbar = priColor;
-        _background = priColor;
-        appbarTitleString = "Hi, thanhcham";
-        appBarTitleText = Text(
-          appbarTitleString,
-          style: const TextStyle(
-              fontSize: textsize + 4,
-              color: textColor,
-              fontWeight: FontWeight.bold),
-        );
-      } else if (index == 1) {
-        appbarTitleString = "Yeu Thich";
-
-        appBarTitleText = Text(
-          appbarTitleString,
-          style: const TextStyle(color: textColor),
-        );
-      } else if (index == 2) {
-        appbarTitleString = "Don Hang";
-        _background = Colors.grey.shade100;
-        _colorappbar = Colors.white;
-        appBarTitleText = Text(
-          appbarTitleString,
-          style: const TextStyle(color: textColor),
-        );
-      } else if (index == 3) {
-        _colorappbar = Colors.white;
-        _background = Colors.grey.shade100;
-        appbarTitleString = "Ho So";
-        appBarTitleText = Text(
-          appbarTitleString,
-          style: const TextStyle(color: textColor),
-        );
-      }
     });
   }
-
-  static const List<Widget> _pages = [
-    BodyHome(),
-    BodyHome(),
-    HoanThanhPage(),
-    HoSo(),
-  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: _background,
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        backgroundColor: _colorappbar,
-        elevation: 0,
-        titleSpacing: 20,
-        title: appBarTitleText,
-        actions: [
-          IconButton(
-            onPressed: () {
-              showSearch(context: context, delegate: Search());
-            },
-            padding: EdgeInsets.zero,
-            constraints: const BoxConstraints(),
-            icon: SvgPicture.asset("assets/icons/search.svg"),
-          ),
-          const SizedBox(width: 15),
-          IconButton(
-            onPressed: () {
-              Navigator.pushNamed(context, "/giohang");
-            },
-            padding: EdgeInsets.zero,
-            constraints: const BoxConstraints(),
-            icon: SvgPicture.asset("assets/icons/shopping-cart.svg"),
-          ),
-          const SizedBox(width: 20),
-        ],
-      ),
-      body: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: Column(
-          children: [
-            _pages.elementAt(_selectedIndex),
-          ],
-        ),
-      ),
+      body: _pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex, //New
         onTap: _onItemTapped,
