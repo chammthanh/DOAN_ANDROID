@@ -1,18 +1,18 @@
 import 'package:doan_cake/constraint.dart';
-import 'package:doan_cake/screens/donmua/hoanthanh/components/button.dart';
-import 'package:doan_cake/screens/donmua/hoanthanh/components/hinhanh.dart';
-import 'package:doan_cake/screens/donmua/hoanthanh/components/text.dart';
-import 'package:doan_cake/screens/donmua/hoanthanh/components/thanhtien.dart';
+import 'package:doan_cake/screens/donmua/dahuy/components/button.dart';
+import 'package:doan_cake/screens/donmua/dahuy/components/hinhanh.dart';
+import 'package:doan_cake/screens/donmua/dahuy/components/text.dart';
+import 'package:doan_cake/screens/donmua/dahuy/components/thanhtien.dart';
 import 'package:doan_cake/widgets/line.dart';
 import 'package:flutter/material.dart';
 
-class HoanThanhPage extends StatefulWidget {
-  const HoanThanhPage({Key? key}) : super(key: key);
+class HuyPage extends StatefulWidget {
+  const HuyPage({Key? key}) : super(key: key);
   @override
-  _HoanThanhPageState createState() => _HoanThanhPageState();
+  _HuyPageState createState() => _HuyPageState();
 }
 
-class _HoanThanhPageState extends State<HoanThanhPage> {
+class _HuyPageState extends State<HuyPage> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -28,7 +28,7 @@ class _HoanThanhPageState extends State<HoanThanhPage> {
                   heightFactor: 1.2,
                   alignment: Alignment.topRight,
                   child: Text(
-                    "Hoàn Thành",
+                    "Đã hủy",
                     style: TextStyle(
                       fontSize: textsize - 6,
                       fontWeight: FontWeight.bold,
@@ -41,7 +41,7 @@ class _HoanThanhPageState extends State<HoanThanhPage> {
                   children: [
                     hinhanh,
                     const SizedBox(width: 7),
-                    const TextHT(),
+                    const TextHuy(),
                   ],
                 ),
                 // const SizedBox(height: 12),
@@ -57,7 +57,7 @@ class _HoanThanhPageState extends State<HoanThanhPage> {
                   ],
                 ),
                 const SizedBox(height: 5),
-                const ButtonHT(),
+                const ButtonHuy(),
               ],
             ),
           ),
