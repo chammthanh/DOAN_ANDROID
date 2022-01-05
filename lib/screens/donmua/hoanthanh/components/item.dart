@@ -1,8 +1,8 @@
 import 'package:doan_cake/constraint.dart';
-import 'package:doan_cake/screens/hoanthanh/components/button.dart';
-import 'package:doan_cake/screens/hoanthanh/components/hinhanh.dart';
-import 'package:doan_cake/screens/hoanthanh/components/text.dart';
-import 'package:doan_cake/screens/hoanthanh/components/thanhtien.dart';
+import 'package:doan_cake/screens/donmua/hoanthanh/components/button.dart';
+import 'package:doan_cake/screens/donmua/hoanthanh/components/hinhanh.dart';
+import 'package:doan_cake/screens/donmua/hoanthanh/components/text.dart';
+import 'package:doan_cake/screens/donmua/hoanthanh/components/thanhtien.dart';
 import 'package:doan_cake/widgets/line.dart';
 import 'package:flutter/material.dart';
 
@@ -37,7 +37,7 @@ class _ItemHTState extends State<ItemHT> {
             children: [
               hinhanh,
               const SizedBox(width: 7),
-              const TextDM(),
+              const TextHT(),
             ],
           ),
           // const SizedBox(height: 12),
@@ -53,7 +53,7 @@ class _ItemHTState extends State<ItemHT> {
             ],
           ),
           const SizedBox(height: 5),
-          const ButtonDM(),
+          const ButtonHT(),
         ],
       ),
     );

@@ -1,5 +1,5 @@
 import 'package:doan_cake/models/donmua.dart';
-import 'package:doan_cake/screens/hoanthanh/components/nav.dart';
+import 'package:doan_cake/screens/donmua/components/nav.dart';
 import 'package:flutter/material.dart';
 
 class NavBar extends StatelessWidget {
