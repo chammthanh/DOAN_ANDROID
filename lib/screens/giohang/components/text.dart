@@ -1,5 +1,5 @@
 import 'package:doan_cake/constraint.dart';
-import 'package:doan_cake/screens/giohang/components/soluong.dart';
+import 'package:doan_cake/widgets/soluong.dart';
 import 'package:flutter/material.dart';
 
 class TextGioHang extends StatefulWidget {

@@ -8,6 +8,8 @@ import 'package:doan_cake/screens/chitietsanpham/components/body.dart';
 import 'package:doan_cake/screens/chitietsanpham/components/danhgia.dart';
 import 'package:doan_cake/screens/chitietsanpham/components/hinhanh.dart';
 import 'package:doan_cake/screens/chitietsanpham/components/sanpham.dart';
+import 'package:doan_cake/widgets/heart.dart';
+import 'package:doan_cake/widgets/soluong.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
@@ -77,7 +79,9 @@ class _ChiTietSPState extends State<ChiTietSP> {
         ),
       ),
       bottomNavigationBar: TextButton(
-          onPressed: () {},
+          onPressed: () {
+            bottomSheets(context);
+          },
           style: TextButton.styleFrom(
             padding: const EdgeInsets.symmetric(vertical: 15),
             backgroundColor: priColor,
@@ -86,4 +90,106 @@ class _ChiTietSPState extends State<ChiTietSP> {
           child: const Text("Thêm vào giỏ hàng")),
     );
   }
+}
+
+void bottomSheets(context) {
+  showModalBottomSheet(
+    context: context,
+    backgroundColor: Colors.transparent,
+    builder: (context) => Container(
+      height: 330,
+      padding: const EdgeInsets.all(20),
+      decoration: const BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(30),
+          topRight: Radius.circular(30),
+        ),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Text("Chọn kích thước:"),
+          TextButton(
+            onPressed: () {},
+            style: TextButton.styleFrom(),
+            child: const Text("90x90cm"),
+          ),
+          const SizedBox(height: 10),
+          const Text("Ghi chú:"),
+          const TextField(
+            decoration: InputDecoration(
+              hintText: 'Ghi chú tại đây',
+              hintStyle: TextStyle(
+                  fontSize: textsize - 6, fontStyle: FontStyle.italic),
+              border: OutlineInputBorder(),
+              enabledBorder: OutlineInputBorder(
+                borderSide: BorderSide(
+                  color: Colors.grey,
+                  width: 0.5,
+                ),
+              ),
+            ),
+          ),
+          const SizedBox(height: 10),
+          Row(
+            children: const [
+              Text("Số Lượng"),
+              SizedBox(width: 20),
+              SoLuong(),
+            ],
+          ),
+          const SizedBox(height: 10),
+          Row(
+            children: const [
+              Text("Tổng tiền"),
+              SizedBox(width: 20),
+              Text(
+                "120.000",
+                style: TextStyle(
+                  color: priceColor,
+                  fontWeight: FontWeight.bold,
+                  fontSize: textsize,
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 10),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              TextButton(
+                style: TextButton.styleFrom(
+                  primary: deftextColor,
+                  backgroundColor: defbtnColor,
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
+                  textStyle: const TextStyle(
+                    fontSize: textsize - 2,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                onPressed: () {},
+                child: const Text("Thêm vào giỏ hàng"),
+              ),
+              TextButton(
+                style: TextButton.styleFrom(
+                  primary: Colors.white,
+                  backgroundColor: priColor,
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
+                  textStyle: const TextStyle(
+                    fontSize: textsize - 2,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                onPressed: () {},
+                child: const Text("Đặt hàng"),
+              ),
+            ],
+          )
+        ],
+      ),
+    ),
+  );
 }
