@@ -8,13 +8,8 @@ import 'package:doan_cake/screens/chitietsanpham/components/body.dart';
 import 'package:doan_cake/screens/chitietsanpham/components/danhgia.dart';
 import 'package:doan_cake/screens/chitietsanpham/components/hinhanh.dart';
 import 'package:doan_cake/screens/chitietsanpham/components/sanpham.dart';
-import 'package:doan_cake/widgets/heart.dart';
 import 'package:doan_cake/widgets/soluong.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 
 class ChiTietSP extends StatefulWidget {
   const ChiTietSP({Key? key}) : super(key: key);

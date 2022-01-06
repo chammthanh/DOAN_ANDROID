@@ -43,6 +43,7 @@ class _TextGioHangState extends State<TextGioHang> {
           ),
           SizedBox(height: 15),
           SoLuong(),
+          
         ],
       ),
     );

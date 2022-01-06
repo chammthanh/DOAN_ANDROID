@@ -32,13 +32,11 @@ class _DanhGiaPageState extends State<DanhGiaPage> {
         ),
       ),
       body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 20),
-          child: Column(
-            children: const [
-              ItemDG(),
-            ],
-          ),
+        padding: const EdgeInsets.symmetric(vertical: 20),
+        child: Column(
+          children: const [
+            ItemDG(),
+          ],
         ),
       ),
       bottomNavigationBar: TextButton(
