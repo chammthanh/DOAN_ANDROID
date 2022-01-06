@@ -78,16 +78,45 @@ class _ChiTietSPState extends State<ChiTietSP> {
           ],
         ),
       ),
-      bottomNavigationBar: TextButton(
-          onPressed: () {
-            bottomSheets(context);
-          },
-          style: TextButton.styleFrom(
-            padding: const EdgeInsets.symmetric(vertical: 15),
-            backgroundColor: priColor,
-            primary: textColor,
-          ),
-          child: const Text("Thêm vào giỏ hàng")),
+      bottomNavigationBar: Container(
+        padding: const EdgeInsets.symmetric(
+          vertical: 10,
+          horizontal: 20,
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Container(
+              padding: const EdgeInsets.all(5),
+              decoration: BoxDecoration(
+                border: Border.all(color: subTextColor),
+                borderRadius: const BorderRadius.all(
+                  Radius.circular(10),
+                ),
+              ),
+              child: const Icon(
+                Icons.favorite_border,
+                size: 36,
+                color: subTextColor,
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+                bottomSheets(context);
+              },
+              style: TextButton.styleFrom(
+                padding: const EdgeInsets.symmetric(
+                  vertical: 17,
+                  horizontal: 90,
+                ),
+                backgroundColor: priColor,
+                primary: textColor,
+              ),
+              child: const Text("Thêm vào giỏ hàng"),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
@@ -112,7 +141,11 @@ void bottomSheets(context) {
           const Text("Chọn kích thước:"),
           TextButton(
             onPressed: () {},
-            style: TextButton.styleFrom(),
+            style: TextButton.styleFrom(
+              primary: textColor,
+              backgroundColor: Colors.grey[200],
+              padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 20),
+            ),
             child: const Text("90x90cm"),
           ),
           const SizedBox(height: 10),
@@ -147,7 +180,7 @@ void bottomSheets(context) {
               Text(
                 "120.000",
                 style: TextStyle(
-                  color: priceColor,
+                  color: textColor,
                   fontWeight: FontWeight.bold,
                   fontSize: textsize,
                 ),
@@ -183,7 +216,9 @@ void bottomSheets(context) {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/thanhtoan');
+                },
                 child: const Text("Đặt hàng"),
               ),
             ],
