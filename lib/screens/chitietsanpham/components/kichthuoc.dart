@@ -18,28 +18,16 @@ class KichThuoc extends StatelessWidget {
         ),
         Row(
           children: [
-            ElevatedButton(
-              onPressed: () {},
-              child: const Text(
-                "90x90cm",
-                style: TextStyle(
-                  fontSize: textsize - 2,
-                  fontStyle: FontStyle.italic,
-                  color: textColor,
-                ),
+            Container(
+              padding: const EdgeInsets.symmetric(
+                vertical: 7,
+                horizontal: 15,
               ),
-            ),
-            const SizedBox(width: 20),
-            ElevatedButton(
-              onPressed: () {},
-              child: const Text(
-                "90x90cm",
-                style: TextStyle(
-                  fontSize: textsize - 2,
-                  fontStyle: FontStyle.italic,
-                  color: textColor,
-                ),
-              ),
+              decoration: BoxDecoration(
+                  border: Border.all(color: subTextColor),
+                  borderRadius: BorderRadius.circular(3)),
+              child: const Text("90x90cm",
+                  style: TextStyle(fontSize: textsize - 4)),
             ),
           ],
         ),

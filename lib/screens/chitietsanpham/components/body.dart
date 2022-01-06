@@ -21,14 +21,18 @@ class BodyCTSP extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const ListTile(
-            contentPadding: EdgeInsets.zero,
-            title: Text(
-              "Bánh sinh nhật có chữ HAPPY BIRTHDAY màu xanh navy",
-              style: TextStyle(fontSize: textsize, fontWeight: FontWeight.bold),
-            ),
-            trailing: ClickHeart(),
+          const Text(
+            "Bánh sinh nhật có chữ HAPPY BIRTHDAY màu xanh navy",
+            style: TextStyle(fontSize: textsize, fontWeight: FontWeight.bold),
           ),
+          // const ListTile(
+          //   contentPadding: EdgeInsets.zero,
+          //   title: Text(
+          //     "Bánh sinh nhật có chữ HAPPY BIRTHDAY màu xanh navy",
+          //     style: TextStyle(fontSize: textsize, fontWeight: FontWeight.bold),
+          //   ),
+          //   trailing: ClickHeart(),
+          // ),
           const SizedBox(height: 6),
           const Text(
             "120.000đ",
