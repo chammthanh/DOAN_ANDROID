@@ -55,8 +55,8 @@ class DanhGia extends StatelessWidget {
               ],
             ),
             description: Wrap(
-              children: [
-                const Text(
+              children: const [
+                Text(
                     "Chất lượng sản phẩm tuyệt vời, Đóng gói sản phẩm rất đẹp và chắc chắn "),
               ],
             ),
