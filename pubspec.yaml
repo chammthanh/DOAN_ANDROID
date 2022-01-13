@@ -40,7 +40,8 @@ dependencies:
   flutter_image_slideshow: ^0.1.2
   material_floating_search_bar: ^0.3.6
   getwidget: ^2.0.4
-
+  shared_preferences: ^2.0.11
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -67,6 +68,7 @@ flutter:
   assets:
     - assets/images/
     - assets/images/products/
+    - assets/images/banner/
     - assets/icons/
     - assets/menu/
   #   - images/a_dot_ham.jpeg

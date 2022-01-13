@@ -1,7 +1,6 @@
 import 'package:doan_cake/constraint.dart';
 import 'package:doan_cake/screens/hoso/thongtincanhan/components/btnluu.dart';
 import 'package:doan_cake/screens/hoso/thongtincanhan/components/textform.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

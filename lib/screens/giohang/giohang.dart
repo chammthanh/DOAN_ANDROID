@@ -1,9 +1,7 @@
 import 'package:doan_cake/constraint.dart';
 import 'package:doan_cake/screens/giohang/components/body.dart';
 import 'package:doan_cake/screens/giohang/components/dathangbar.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
 import 'package:flutter_svg/svg.dart';
 
 class GioHang extends StatefulWidget {
