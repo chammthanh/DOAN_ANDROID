@@ -1,14 +1,8 @@
-import 'dart:ui';
 
 import 'package:doan_cake/constraint.dart';
 import 'package:doan_cake/screens/thanhtoan/components/body.dart';
 import 'package:doan_cake/screens/thanhtoan/components/bottom.dart';
-import 'package:doan_cake/widgets/line.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class ThanhToanPage extends StatefulWidget {

@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Cake',
-      initialRoute: '/chitietsanpham',
+      initialRoute: '/trangchu',
       routes: {
         '/': (context) => const DangNhap(),
         '/dangky': (context) => const DangKy(),

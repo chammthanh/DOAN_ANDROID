@@ -7,23 +7,20 @@ class MenuBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 20),
-      child: Row(
-        children: [
-          Expanded(
-            child: SizedBox(
-              height: 57,
-              child: ListView.builder(
-                  shrinkWrap: true,
-                  scrollDirection: Axis.horizontal,
-                  itemCount: loaisp.length,
-                  itemBuilder: (context, index) =>
-                      ItemMenu(loaisp: loaisp[index])),
-            ),
+    return Row(
+      children: [
+        Expanded(
+          child: Container(
+            height: 85,
+            child: ListView.builder(
+                shrinkWrap: true,
+                scrollDirection: Axis.horizontal,
+                itemCount: loaisp.length,
+                itemBuilder: (context, index) =>
+                    ItemMenu(loaisp: loaisp[index])),
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

@@ -1,6 +1,11 @@
 import 'package:doan_cake/constraint.dart';
 import 'package:doan_cake/screens/trangchu/components/item.dart';
 import 'package:doan_cake/screens/trangchu/components/menubar.dart';
+import 'package:doan_cake/screens/trangchu/components/slide.dart';
+import 'package:doan_cake/screens/trangchu/components/spmoi.dart';
+import 'package:doan_cake/screens/trangchu/components/spyeuthich.dart';
+import 'package:doan_cake/screens/trangchu/components/uudai.dart';
+import 'package:doan_cake/widgets/line.dart';
 import 'package:doan_cake/widgets/search.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -30,7 +35,7 @@ class _BodyHomeState extends State<BodyHome> {
         actions: [
           IconButton(
             onPressed: () {
-              showSearch(context: context, delegate: Search());
+              // showSearch(context: context, delegate: Search());
             },
             padding: EdgeInsets.zero,
             constraints: const BoxConstraints(),
@@ -52,98 +57,45 @@ class _BodyHomeState extends State<BodyHome> {
         scrollDirection: Axis.vertical,
         child: Column(
           children: [
-            SizedBox(
-              width: double.maxFinite,
-              height: 180,
-              child: Padding(
-                padding: const EdgeInsets.only(left: 20, right: 20, bottom: 5),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(15),
-                  child: Image.asset(
-                    'assets/images/banner.png',
-                    width: 170,
-                    fit: BoxFit.cover,
-                  ),
-                ),
-              ),
-            ),
-            const SizedBox(height: 10),
-            const MenuBar(),
-            const SizedBox(height: 5),
+            const Slide(),
+            const SizedBox(height: 20),
             Container(
-              padding: const EdgeInsets.only(top: 15),
               decoration: const BoxDecoration(
-                color: seColor,
+                color: Colors.white,
                 borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(35),
-                    topRight: Radius.circular(35)),
+                    topLeft: Radius.circular(20),
+                    topRight: Radius.circular(20)),
               ),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  ListTile(
-                    contentPadding: const EdgeInsets.only(left: 25, right: 10),
-                    title: const Text(
-                      "Sản Phẩm Mới",
-                      style: TextStyle(
-                          fontSize: textsize + 4,
-                          color: textColor,
-                          fontWeight: FontWeight.bold),
-                    ),
-                    trailing: IconButton(
-                      onPressed: () {},
-                      padding: EdgeInsets.zero,
-                      icon: SvgPicture.asset(
-                        'assets/icons/chevron-right.svg',
-                        width: 40,
-                        height: 40,
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 5),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 20, right: 20),
-                    child: SingleChildScrollView(
-                      scrollDirection: Axis.horizontal,
-                      child: Row(
-                        children: const [
-                          ItemProduct(),
-                          ItemProduct(),
-                          ItemProduct(),
-                        ],
-                      ),
+                  Container(
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 30, horizontal: 20),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Text(
+                          "Loại sản phẩm",
+                          style: TextStyle(
+                              fontSize: textsize,
+                              color: textColor,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        SizedBox(height: 15),
+                        MenuBar(),
+                      ],
                     ),
                   ),
-                  ListTile(
-                    contentPadding: const EdgeInsets.only(left: 25, right: 10),
-                    title: const Text(
-                      "Sản Phẩm Yêu Thích",
-                      style: TextStyle(
-                          fontSize: textsize + 4,
-                          color: textColor,
-                          fontWeight: FontWeight.bold),
-                    ),
-                    trailing: IconButton(
-                      onPressed: () {},
-                      padding: EdgeInsets.zero,
-                      icon: SvgPicture.asset(
-                        'assets/icons/chevron-right.svg',
-                        width: 40,
-                        height: 40,
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 5),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 20, right: 20),
-                    child: SingleChildScrollView(
-                      scrollDirection: Axis.horizontal,
-                      child: Row(
-                        children: const [
-                          ItemProduct(),
-                          ItemProduct(),
-                          ItemProduct(),
-                        ],
-                      ),
+                  UuDai(),
+                  Container(
+                    padding: const EdgeInsets.only(left: 20),
+                    child: Column(
+                      children: [
+                        const SanPhamMoi(),
+                        line,
+                        const SanPhamYeuThich(),
+                      ],
                     ),
                   ),
                 ],
