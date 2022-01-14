@@ -55,8 +55,6 @@ class _DangKyState extends State<DangKy> {
                   fontWeight: FontWeight.w300,
                 ),
               ),
-              const SizedBox(height: 20),
-              const ButtonDangKy(),
               const SizedBox(height: 25),
               const MediaButton(),
               const SizedBox(height: 20),

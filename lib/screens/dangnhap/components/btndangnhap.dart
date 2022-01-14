@@ -15,7 +15,8 @@ class ButtonDangNhapState extends State<ButtonDangNhap> {
       height: 45,
       child: ElevatedButton(
         onPressed: () {
-          Navigator.pushNamed(context, '/trangchu');
+          // Navigator.pushNamed(context, '/trangchu');
+          
         },
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all(priColor),

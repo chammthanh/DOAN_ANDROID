@@ -1,5 +1,6 @@
 import 'package:doan_cake/constraint.dart';
 import 'package:flutter/material.dart';
+import 'dangnhapProvider.dart';
 
 class InputDangNhap extends StatefulWidget {
   const InputDangNhap({Key? key}) : super(key: key);
@@ -8,15 +9,19 @@ class InputDangNhap extends StatefulWidget {
 }
 
 class _InputState extends State<InputDangNhap> {
+  final TextEditingController _email = TextEditingController();
+  final TextEditingController _password = TextEditingController();
   bool pass = true;
+  dangnhapProvider _auth = new dangnhapProvider();
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         Container(
-          child: const TextField(
+          child: TextField(
+            controller: _email,
             textInputAction: TextInputAction.next,
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
               labelText: 'Tên Đăng Nhập',
               labelStyle:
                   TextStyle(color: inputTextColor, fontSize: textsize - 8),
@@ -45,6 +50,7 @@ class _InputState extends State<InputDangNhap> {
         ),
         Container(
           child: TextField(
+            controller: _password,
             keyboardType: TextInputType.visiblePassword,
             textInputAction: TextInputAction.done,
             obscureText: pass,
@@ -86,6 +92,63 @@ class _InputState extends State<InputDangNhap> {
             ],
           ),
         ),
+        const SizedBox(height: 10),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            TextButton(
+              onPressed: () {},
+              child: const Text(
+                "Quên mật khẩu ?",
+                style: TextStyle(
+                    color: subTextColor,
+                    fontStyle: FontStyle.italic,
+                    decoration: TextDecoration.underline),
+              ),
+            ),
+          ],
+        ),
+        const SizedBox(height: 20),
+        SizedBox(
+          width: double.maxFinite,
+          height: 45,
+          child: ElevatedButton(
+            onPressed: () {
+              // Navigator.pushNamed(context, '/trangchu');
+              if (_email.text == "" || _password.text == "") {
+                showDialog(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return AlertDialog(
+                      content:const Text("Chua nhap email hoac mat khau"),
+                      title: Row(
+                        children:const [
+                          Icon(
+                            Icons.warning,
+                            color: Colors.red,
+                          ),
+                        ],
+                      ),
+                    );
+                  },
+                );
+              } else {
+                _auth.dangnhap(context, _email.text, _password.text);
+              }
+            },
+            style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all(priColor),
+            ),
+            child: const Text(
+              'Đăng Nhập',
+              style: TextStyle(
+                color: textColor,
+                fontSize: textsize - 6,
+                fontWeight: FontWeight.w400,
+              ),
+            ),
+          ),
+        )
       ],
     );
   }

@@ -1,11 +1,7 @@
 import 'package:doan_cake/constraint.dart';
 import 'package:doan_cake/widgets/mediabutton.dart';
-import 'package:doan_cake/screens/dangnhap/components/btndangnhap.dart';
 import 'package:doan_cake/screens/dangnhap/components/inputdangnhap.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
-import 'package:flutter/rendering.dart';
 
 class DangNhap extends StatefulWidget {
   const DangNhap({Key? key}) : super(key: key);
@@ -30,24 +26,7 @@ class _SignInState extends State<DangNhap> {
                     fontSize: textsize + 4, fontWeight: FontWeight.bold)),
             const SizedBox(height: 36),
             const InputDangNhap(),
-            const SizedBox(height: 10),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                TextButton(
-                  onPressed: () {},
-                  child: const Text(
-                    "Quên mật khẩu ?",
-                    style: TextStyle(
-                        color: subTextColor,
-                        fontStyle: FontStyle.italic,
-                        decoration: TextDecoration.underline),
-                  ),
-                ),
-              ],
-            ),
-            const SizedBox(height: 20),
-            const ButtonDangNhap(),
+
             const SizedBox(height: 35),
             const Text(
               "Hoặc đăng nhập với",
