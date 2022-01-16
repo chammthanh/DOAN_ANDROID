@@ -1,3 +1,4 @@
+import 'package:doan_cake/screens/an/chitietsp.dart';
 import 'package:doan_cake/screens/banhkem/banhkem.dart';
 import 'package:doan_cake/screens/banhmi/banhmi.dart';
 import 'package:doan_cake/screens/banhquy/banhquy.dart';
@@ -32,8 +33,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Cake',
-      initialRoute: '/trangchu',
+      initialRoute: '/test',
       routes: {
+        '/test': (context) => const CTSP(),
         '/': (context) => const DangNhap(),
         '/dangky': (context) => const DangKy(),
         '/trangchu': (context) => const TrangChu(),

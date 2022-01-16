@@ -6,7 +6,7 @@ import 'package:http/http.dart' as http;
 class dangkyProvider {
   Future<void> dangky(
       BuildContext context,String username, String email, String password, String ten) async {
-    String url = 'http://10.0.2.2:8000/api/dangky';
+    String url = 'http://10.0.2.2:8000/api/register';
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
     Map body = {'username':username,'email': email, 'password': password, 'ten': ten};
     var response = await http.post(Uri.parse(url),

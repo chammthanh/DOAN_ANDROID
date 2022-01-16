@@ -97,7 +97,7 @@ class _ItemProductState extends State<ItemProduct> {
                           alignment: Alignment.center,
                           padding: const EdgeInsets.all(5),
                           decoration: BoxDecoration(
-                              color: Colors.grey,
+                              color: seColor,
                               borderRadius: BorderRadius.circular(5)),
                           child: IconButton(
                             padding: EdgeInsets.zero,
@@ -105,6 +105,7 @@ class _ItemProductState extends State<ItemProduct> {
                             onPressed: () {},
                             icon: SvgPicture.asset(
                               "assets/icons/shopping-cart.svg",
+                              color: Colors.grey,
                             ),
                           ),
                         ),

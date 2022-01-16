@@ -181,7 +181,8 @@ class _InputState extends State<InputDangKy> {
           child: ElevatedButton(
             onPressed: () {
               // Navigator.pushNamed(context, '/trangchu');
-              if (_email.text == "" ||
+              if (_username.text == "" ||
+                  _email.text == "" ||
                   _password.text == "" ||
                   _ten.text == "") {
                 showDialog(
@@ -201,7 +202,8 @@ class _InputState extends State<InputDangKy> {
                   },
                 );
               } else {
-                _auth.dangky(context,_username.text, _email.text, _password.text, _ten.text);
+                _auth.dangky(context, _username.text, _email.text,
+                    _password.text, _ten.text);
               }
             },
             style: ButtonStyle(

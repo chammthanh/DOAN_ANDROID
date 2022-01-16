@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:http/http.dart' as http;
+import 'package:flutter/material.dart';
 
 class dangnhapProvider {
   Future<void> dangnhap(
@@ -15,9 +16,10 @@ class dangnhapProvider {
       final jsonResponse = json.decode(response.body);
       print('response status:${response.statusCode}');
       print('response status:${response.body}');
-      sharedPreferences.setString("token", "abc");
+      sharedPreferences.setString("token", jsonResponse['access_token']);
+      Navigator.pushNamed(context, '/trangchu');
     } else {
-      print('sai bét');
+      print('response status:${response.body}');
     }
   }
 }
