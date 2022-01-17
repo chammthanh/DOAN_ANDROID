@@ -1,0 +1,38 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class Hoadon extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('hoadon', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('taikhoan_id')->unsigned();
+            $table->dateTime('ngaylap');
+            $table->integer('tongtien');
+            $table->integer('dsdiachi_id')->unsigned();
+            $table->boolean('trangthai');
+            $table->timestamps();
+            $table->foreign('taikhoan_id')->references('id')->on('taikhoan');
+            $table->foreign('dsdiachi_id')->references('id')->on('danhsachdiachi');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('hoadon');
+    }
+}
