@@ -15,4 +15,12 @@ class LoaiSanPhamController extends Controller
             'data' => $danhSach
         ]);
     }
+    function chiTietLoaiSanPham($id)
+    {
+        $danhSach = loaisanpham::find($id);
+        return json_encode([
+            'success' => true,
+            'data' => $danhSach
+        ]);
+    }
 }

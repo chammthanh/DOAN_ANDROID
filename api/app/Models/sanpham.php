@@ -17,4 +17,11 @@ class sanpham extends Model
     ];
     protected $primarykey = 'id';
     protected $table = 'sanpham';
+
+    // public function getAllData()
+    // {
+    //     $query = 'select * from sanpham 
+    //     inner join chitietsanpham on sanpham.id = chitietsanpham.sanpham_id ';
+    //     return selectWithParam($query);
+    // }
 }
