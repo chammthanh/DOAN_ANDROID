@@ -24,16 +24,22 @@ $router->get('/', function () use ($router) {
 
 $router->get('tai-khoan/danh-sach', 'TaiKhoanController@layDanhSach');
 
-$router->get('dia-chi/danh-sach', [DanhSachDiaChiController::class, 'layDanhSach']);
-$router->get('dia-chi/{id}', [DanhSachDiaChiController::class, 'xemChiTiet']);
-$router->post('dia-chi/them-dia-chi', [DanhSachDiaChiController::class, 'themDiaChi']);
-$router->delete('dia-chi/xoa-dia-chi/{id}', [DanhSachDiaChiController::class, 'xoaDiaChi']);
+$router->get('loai-san-pham', 'LoaiSanPhamController@layDanhSach');
+$router->get('loai-san-pham/{id}', 'LoaiSanPhamController@chiTietLoaiSanPham');
+
 
 $router->group(['prefix' => 'api'], function () use ($router) {
     $router->post('/login', 'AuthController@login');
     $router->post('/register', 'AuthController@register');
     $router->post('/logout', 'AuthController@logout');
     $router->group(['middleware' => 'auth'], function () use ($router) {
-        $router->get('/loai-san-pham/danh-sach', 'LoaiSanPhamController@layDanhSach');
+        $router->get('/dia-chi/danh-sach', 'DanhSachDiaChiController@layDanhSach');
+        $router->post('/dia-chi/them-dia-chi', 'DanhSachDiaChiController@themDiaChi');
+        $router->get('/dia-chi/{id}', 'DanhSachDiaChiController@xemChiTiet');
+        $router->delete('/dia-chi/xoa-dia-chi/{id}', 'DanhSachDiaChiController@xoaDiaChi');
+
+        $router->get('/tai-khoan/{id}', 'TaiKhoanController@chiTietTaiKhoan');
+        $router->post('/tai-khoan/edit/{id}', 'TaiKhoanController@suaThongTin');
+        $router->post('/tai-khoan/edit/doi-mat-khau/{id}', 'TaiKhoanController@doiMatKhau');
     });
 });
