@@ -43,4 +43,7 @@ class SanPhamController extends Controller
             'data' => $sanpham
         ]);
     }
+    function sp()
+    {
+    }
 }
