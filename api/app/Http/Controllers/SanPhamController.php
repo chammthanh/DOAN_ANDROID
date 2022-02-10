@@ -7,7 +7,4 @@ use Illuminate\Http\Request;
 
 class SanPhamController extends Controller
 {
-    function showSanPham()
-    {
-    }
 }
