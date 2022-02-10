@@ -27,6 +27,8 @@ $router->get('tai-khoan/danh-sach', 'TaiKhoanController@layDanhSach');
 $router->get('loai-san-pham', 'LoaiSanPhamController@layDanhSach');
 $router->get('loai-san-pham/{id}', 'LoaiSanPhamController@chiTietLoaiSanPham');
 
+$router->get('san-pham', 'SanPhamController@sanpham');
+
 
 $router->group(['prefix' => 'api'], function () use ($router) {
     $router->post('/login', 'AuthController@login');
