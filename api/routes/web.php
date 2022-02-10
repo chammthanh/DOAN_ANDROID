@@ -28,6 +28,8 @@ $router->get('loai-san-pham', 'LoaiSanPhamController@layDanhSach');
 $router->get('loai-san-pham/{id}', 'LoaiSanPhamController@chiTietLoaiSanPham');
 
 $router->get('san-pham', 'SanPhamController@sanpham');
+$router->get('san-pham/{id}', 'SanPhamController@chitietsanpham');
+
 
 
 $router->group(['prefix' => 'api'], function () use ($router) {
