@@ -1,8 +1,6 @@
 import 'package:doan_cake/constraint.dart';
-import 'package:doan_cake/models/sanpham.dart';
 import 'package:doan_cake/screens/chitietsanpham/components/kichthuoc.dart';
 import 'package:doan_cake/screens/chitietsanpham/components/mota.dart';
-import 'package:doan_cake/widgets/heart.dart';
 import 'package:doan_cake/widgets/line.dart';
 import 'package:flutter/material.dart';
 
