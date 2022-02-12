@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class SanPhamController extends Controller
 {
-    function sanpham()
+    function sanPham()
     {
         $danhSach =
             sanpham::select('*')
@@ -24,7 +24,7 @@ class SanPhamController extends Controller
             'data' => $danhSach
         ]);
     }
-    function chitietsanpham($id)
+    function chiTietSanPham($id)
     {
         $sanpham =
             sanpham::select('*')
@@ -43,7 +43,7 @@ class SanPhamController extends Controller
             'data' => $sanpham
         ]);
     }
-    function timkiemsanpham($tensanpham)
+    function timKiemSanPham($tensanpham)
     {
         $timkiem = sanpham::find($tensanpham);
         if (!empty($timkiem)) {

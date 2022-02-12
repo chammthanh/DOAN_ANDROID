@@ -27,10 +27,10 @@ $router->get('tai-khoan/danh-sach', 'TaiKhoanController@layDanhSach');
 $router->get('loai-san-pham', 'LoaiSanPhamController@layDanhSach');
 $router->get('loai-san-pham/{id}', 'LoaiSanPhamController@chiTietLoaiSanPham');
 
-$router->get('san-pham', 'SanPhamController@sanpham');
-$router->get('san-pham/{id}', 'SanPhamController@chitietsanpham');
+$router->get('san-pham', 'SanPhamController@sanPham');
+$router->get('san-pham/{id}', 'SanPhamController@chiTietSanPham');
 
-
+$router->get('tim-kiem/{tensanpham}', 'SanPhamController@timKiemSanPham');
 
 $router->group(['prefix' => 'api'], function () use ($router) {
     $router->post('/login', 'AuthController@login');
@@ -40,6 +40,7 @@ $router->group(['prefix' => 'api'], function () use ($router) {
         $router->get('/dia-chi/danh-sach', 'DanhSachDiaChiController@layDanhSach');
         $router->post('/dia-chi/them-dia-chi', 'DanhSachDiaChiController@themDiaChi');
         $router->get('/dia-chi/{id}', 'DanhSachDiaChiController@xemChiTiet');
+        $router->post('/dia-chi/edit/{id}', 'DanhSachDiaChiController@suaDiaChi');
         $router->delete('/dia-chi/xoa-dia-chi/{id}', 'DanhSachDiaChiController@xoaDiaChi');
 
         $router->get('/tai-khoan/{id}', 'TaiKhoanController@chiTietTaiKhoan');
