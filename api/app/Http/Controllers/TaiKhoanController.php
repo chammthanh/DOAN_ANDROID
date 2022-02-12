@@ -27,6 +27,7 @@ class TaiKhoanController extends Controller
     function suaThongTin(Request $request, $id)
     {
         $taikhoan = taikhoan::find($id);
+
         $taikhoan->email = $request->email;
         $taikhoan->ten = $request->ten;
         $taikhoan->hinhanh = $request->hinhanh;
