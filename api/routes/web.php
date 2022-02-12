@@ -37,14 +37,23 @@ $router->group(['prefix' => 'api'], function () use ($router) {
     $router->post('/register', 'AuthController@register');
     $router->post('/logout', 'AuthController@logout');
     $router->group(['middleware' => 'auth'], function () use ($router) {
-        $router->get('/dia-chi/danh-sach', 'DanhSachDiaChiController@layDanhSach');
-        $router->post('/dia-chi/them-dia-chi', 'DanhSachDiaChiController@themDiaChi');
-        $router->get('/dia-chi/{id}', 'DanhSachDiaChiController@xemChiTiet');
-        $router->post('/dia-chi/edit/{id}', 'DanhSachDiaChiController@suaDiaChi');
-        $router->delete('/dia-chi/xoa-dia-chi/{id}', 'DanhSachDiaChiController@xoaDiaChi');
-
-        $router->get('/tai-khoan/{id}', 'TaiKhoanController@chiTietTaiKhoan');
-        $router->post('/tai-khoan/edit/{id}', 'TaiKhoanController@suaThongTin');
-        $router->post('/tai-khoan/edit/doi-mat-khau/{id}', 'TaiKhoanController@doiMatKhau');
+        $router->group(['prefix' => 'dia-chi'], function () use ($router) {
+            $router->get('/danh-sach', 'DanhSachDiaChiController@layDanhSach');
+            $router->post('/them-dia-chi', 'DanhSachDiaChiController@themDiaChi');
+            $router->get('/{id}', 'DanhSachDiaChiController@xemChiTiet');
+            $router->post('/edit/{id}', 'DanhSachDiaChiController@suaDiaChi');
+            $router->delete('/xoa-dia-chi/{id}', 'DanhSachDiaChiController@xoaDiaChi');
+        });
+        $router->group(['prefix' => 'tai-khoan'], function () use ($router) {
+            $router->get('/{id}', 'TaiKhoanController@chiTietTaiKhoan');
+            $router->post('/edit/{id}', 'TaiKhoanController@suaThongTin');
+            $router->post('/edit/doi-mat-khau/{id}', 'TaiKhoanController@doiMatKhau');
+        });
+        $router->group(['prefix' => 'gio-hang'], function () use ($router) {
+            $router->get('/', 'GioHangController@index');
+            $router->post('/add', 'GioHangController@store');
+            $router->put('edit/{id}', 'GioHangController@update');
+            $router->delete('/delete/{id}', 'GioHangController@destroy');
+        });
     });
 });
