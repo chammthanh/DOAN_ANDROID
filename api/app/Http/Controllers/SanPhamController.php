@@ -43,7 +43,18 @@ class SanPhamController extends Controller
             'data' => $sanpham
         ]);
     }
-    function sp()
+    function timkiemsanpham($tensanpham)
     {
+        $timkiem = sanpham::find($tensanpham);
+        if (!empty($timkiem)) {
+            return json_encode([
+                'success' => false,
+                'message' => 'Không tìm thấy sản phẩm'
+            ]);
+        }
+        return json_encode([
+            'status' => true,
+            'data' => $timkiem
+        ]);
     }
 }
