@@ -39,10 +39,10 @@ class DanhSachDiaChiController extends Controller
         $diaChi->tenkh = $request->tenkh;
         $diaChi->diachi = $request->diachi;
         $diaChi->sdt = $request->sdt;
-        if (empty($diaChi)) {
+        if (!empty($diaChi)) {
             return json_encode([
                 'status' => false,
-                'message' => 'Thêm không thành công'
+                'message' => 'Thêm thất bại'
             ]);
         }
         $diaChi->save();
@@ -51,7 +51,38 @@ class DanhSachDiaChiController extends Controller
             'message' => 'Thêm địa chỉ thành công'
         ]);
     }
-
+    function suaDiaChi(Request $request, $id)
+    {
+        $diaChi = danhsachdiachi::find($id);
+        $diaChi->tenkh = $request->tenkh;
+        $diaChi->diachi = $request->diachi;
+        $diaChi->sdt = $request->sdt;
+        $this->validate(
+            $request,
+            [
+                'tenkh' => ['required', 'max:255'],
+                'diachi' => ['required', 'max:255'],
+                'sdt' => ['required', 'min:10'],
+            ],
+            [
+                'tenkh.required' => 'Tên khách hàng không được bỏ trống',
+                'diachi.required' => 'Địa chỉ không được bỏ trống',
+                'sdt.required' => 'Số điện thoại không được bỏ trống',
+                'sdt.min' => 'Số điện thoại tối đa 10 số'
+            ]
+        );
+        if (!empty($diaChi)) {
+            return json_encode([
+                'status' => false,
+                'message' => 'Sửa thất bại'
+            ]);
+        }
+        $diaChi->save();
+        return json_encode([
+            'status' => true,
+            'message' => 'Sửa địa chỉ thành công'
+        ]);
+    }
     function xoaDiaChi($id)
     {
         $diaChi = danhsachdiachi::find($id);
