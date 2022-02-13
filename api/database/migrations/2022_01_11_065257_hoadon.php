@@ -19,7 +19,7 @@ class Hoadon extends Migration
             $table->dateTime('ngaylap');
             $table->integer('tongtien');
             $table->integer('dsdiachi_id')->unsigned();
-            $table->boolean('trangthai');
+            $table->integer('trangthai'); //1 chờ xác nhận, 2 đóng gói, 3 vận chuyển, 4 hoan thanh, 5 huy
             $table->timestamps();
             $table->foreign('taikhoan_id')->references('id')->on('taikhoan');
             $table->foreign('dsdiachi_id')->references('id')->on('danhsachdiachi');
