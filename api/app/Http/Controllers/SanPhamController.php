@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class SanPhamController extends Controller
 {
-    function sanpham()
+    function sanPham()
     {
         $danhSach =
             sanpham::select('*')
@@ -24,7 +24,7 @@ class SanPhamController extends Controller
             'data' => $danhSach
         ]);
     }
-    function chitietsanpham($id)
+    function chiTietSanPham($id)
     {
         $sanpham =
             sanpham::select('*')
@@ -41,6 +41,20 @@ class SanPhamController extends Controller
         return json_encode([
             'success' => true,
             'data' => $sanpham
+        ]);
+    }
+    function timKiemSanPham($tensanpham)
+    {
+        $timkiem = sanpham::find($tensanpham);
+        if (!empty($timkiem)) {
+            return json_encode([
+                'success' => false,
+                'message' => 'Không tìm thấy sản phẩm'
+            ]);
+        }
+        return json_encode([
+            'status' => true,
+            'data' => $timkiem
         ]);
     }
 }
