@@ -2,6 +2,7 @@ import 'package:doan_cake/constraint.dart';
 import 'package:doan_cake/screens/donmua/donmua.dart';
 import 'package:doan_cake/screens/hoso/hoso.dart';
 import 'package:doan_cake/screens/trangchu/components/body.dart';
+import 'package:doan_cake/screens/yeuthich/yeuthich.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -15,7 +16,7 @@ class _TrangChuState extends State<TrangChu> {
   int _selectedIndex = 0;
   final List<Widget> _pages = [
     const BodyHome(),
-    const BodyHome(),
+    const YeuThichPage(),
     const DonMuaPage(),
     const HoSo(),
   ];
