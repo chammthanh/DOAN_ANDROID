@@ -21,7 +21,6 @@ class Sanpham extends Migration
             $table->string('mota');
             $table->boolean('trangthai'); //0 da xoa, 1 hoat dong
             $table->timestamps();
-            $table->foreign('loaisanpham_id')->references('id')->on('loaisanpham');
         });
     }
 

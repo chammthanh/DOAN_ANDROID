@@ -21,8 +21,6 @@ class Chitiethoadon extends Migration
             $table->integer('thanhtien');
             $table->string('ghichu');
             $table->timestamps();
-            $table->foreign('hoadon_id')->references('id')->on('hoadon');
-            $table->foreign('sanpham_id')->references('id')->on('sanpham');
         });
     }
 

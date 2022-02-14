@@ -21,9 +21,6 @@ class Danhgia extends Migration
             $table->integer('danhgia'); //so sao danh gia
             $table->dateTime('ngaytao');
             $table->timestamps();
-
-            $table->foreign('taikhoan_id')->references('id')->on('taikhoan');
-            $table->foreign('sanpham_id')->references('id')->on('sanpham');
         });
     }
 

@@ -22,7 +22,7 @@ class Chitietsanpham extends Migration
             $table->date('ngaysanxuat');
             $table->date('ngayhethan');
             $table->timestamps();
-            $table->foreign('sanpham_id')->references('id')->on('sanpham');
+
         });
     }
 
