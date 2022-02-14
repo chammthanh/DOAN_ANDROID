@@ -20,7 +20,6 @@ class Danhsachdiachi extends Migration
             $table->string('diachi');
             $table->string('sdt', 11);
             $table->timestamps();
-            $table->foreign('taikhoan_id')->references('id')->on('taikhoan');
         });
     }
 

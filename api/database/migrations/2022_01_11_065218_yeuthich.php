@@ -18,8 +18,7 @@ class Yeuthich extends Migration
             $table->integer('taikhoan_id')->unsigned();
             $table->integer('sanpham_id')->unsigned();
             $table->timestamps();
-            $table->foreign('taikhoan_id')->references('id')->on('taikhoan');
-            $table->foreign('sanpham_id')->references('id')->on('sanpham');
+
         });
     }
 

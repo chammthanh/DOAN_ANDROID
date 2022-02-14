@@ -19,9 +19,6 @@ class Giohang extends Migration
             $table->integer('sanpham_id')->unsigned();
             $table->integer('soluong');
             $table->timestamps();
-
-            $table->foreign('taikhoan_id')->references('id')->on('taikhoan');
-            $table->foreign('sanpham_id')->references('id')->on('sanpham');
         });
     }
 
