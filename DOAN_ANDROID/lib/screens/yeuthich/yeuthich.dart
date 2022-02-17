@@ -28,7 +28,7 @@ class _YeuThichPageState extends State<YeuThichPage> {
             ),
           ),
           title: const Text(
-            'Bánh Mì',
+            'Yêu thích',
             style: TextStyle(color: textColor),
           ),
           actions: [
