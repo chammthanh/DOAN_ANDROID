@@ -16,6 +16,7 @@ import 'package:doan_cake/screens/hoso/thongtincanhan/matkhau/matkhau.dart';
 import 'package:doan_cake/screens/hoso/thongtincanhan/thongtincanhan.dart';
 import 'package:doan_cake/screens/thanhtoan/hoanthanh/hoanthanh.dart';
 import 'package:doan_cake/screens/thanhtoan/thanhtoan.dart';
+import 'package:doan_cake/screens/trangchu/components/testmenu.dart';
 import 'package:doan_cake/screens/trangchu/trangchu.dart';
 import 'package:doan_cake/screens/trangmieng/banhmi.dart';
 import 'package:flutter/material.dart';
@@ -54,6 +55,7 @@ class MyApp extends StatelessWidget {
         '/thanhtoan': (context) => const ThanhToanPage(),
         '/hoanthanh': (context) => const HoanThanh(),
         '/donmua': (context) => const DonMuaPage(),
+        '/test': (context) => const TestMenu(),
       },
       debugShowCheckedModeBanner: false,
     );

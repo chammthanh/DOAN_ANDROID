@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:doan_cake/constraint.dart';
+import 'package:doan_cake/models/loai.dart';
 import 'package:doan_cake/models/loaisp.dart';
 import 'package:flutter/material.dart';
 
